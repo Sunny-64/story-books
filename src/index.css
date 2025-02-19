@@ -1,1 +1,24 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+* {
+  box-sizing: border-box;
+}
+
+@theme {
+  --color-primary: #ffffff;
+  --color-secondary: #f5f7f8;
+  --color-accent: #2c9585;
+  --color-dark-primary: #000000;
+  --color-dark-secondary: #1a1a1a;
+}
+
+
+.light-mode {
+  background-color: var(--color-secondary);
+  color: var(--dark-primary);
+}
+
+.dark-mode {
+  background-color: var(--color-dark-secondary);
+  color: var(--color-primary);
+}
