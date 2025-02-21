@@ -16,7 +16,7 @@ export const routes: RouteObject[] = [
         element: <div>About</div>,
       },
       {
-        path: 'login',
+        path: 'sign-in',
         element: <Login />,
       },
     ],
