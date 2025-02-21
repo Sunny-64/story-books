@@ -4,9 +4,9 @@ import facebook_icon from '../assets/icons/Facebook.svg';
 
 const Login: React.FC = () => {
     return (
-        <main className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 p-5 w-full overflow-hidden justify-center items-center">
-            <div className="order-2 md:order-1 flex flex-col gap-4 md:gap-6 w-full md:max-w-sm max-w-md mx-auto">
-                <div className="space-y-2 text-left">
+        <main className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-5 p-5 w-full overflow-hidden justify-center items-center">
+            <div className="order-2 md:order-1 flex flex-col gap-2 md:gap-4 w-full md:max-w-sm max-w-md mx-auto">
+                <div className="space-y-2 text-left hidden md:block">
                     <h1 className="text-2xl md:text-3xl font-bold">Welcome Back 👋</h1>
                     <p className="text-gray-500 text-sm md:text-md">
                         Make your day special by reading and writing stories! Sign in to get started.
@@ -53,7 +53,7 @@ const Login: React.FC = () => {
                 <img
                     src={placeholder_img}
                     alt="Sign in page image"
-                    className="w-md h-full max-h-64 md:max-h-screen object-cover object-top"
+                    className="w-md h-full max-h-48 md:max-h-screen object-cover object-top"
                 />
             </div>
         </main>
