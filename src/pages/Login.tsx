@@ -10,24 +10,24 @@ const Login: React.FC = () => {
                 </div>
                 <form className='flex flex-col gap-5'>
                     <div className='flex flex-col gap-1'>
-                        <label htmlFor="email" className='text-sm font-semibold text-gray-700'>Email</label>
-                        <input type="text" placeholder="example@mail.com" className='border border-gray-700 px-3 py-2 rounded-md' />
+                        <label htmlFor="email" className='text-sm font-medium'>Email</label>
+                        <input type="text" placeholder="example@mail.com" className='border border-gray-300 px-3 py-2 rounded-md outline-none focus:border-accent' />
                     </div>
-                    <div>
-                        <label htmlFor="password">Password</label>
-                        <input type="text" placeholder="at least 8 characters" />
+                    <div className='flex flex-col gap-1'>
+                        <label htmlFor="password" className='text-sm font-medium'>Password</label>
+                        <input type="text" placeholder="at least 8 characters" className='border border-gray-300 px-3 py-2 rounded-md outline-none focus:border-accent' />
                     </div>
-                    <span>Forgot Password?</span>
-                    <button>Sign In</button>
+                    <span className='text-end text-xs -mt-2'>Forgot Password?</span>
+                    <button className='bg-accent px-3 py-2 text-white rounded-md'>Sign In</button>
                 </form>
-                <span>Or sign in with</span>
+                <span className='custom-bars text-xs text-center'>Or sign in with</span>
                 <div>
                     <button>Google</button>
                     <button>Google</button>
                 </div>
                 <h1>Do you have an account? <span>Sign Up</span></h1>
             </div>
-            <img src={placeholder_img} alt="Sign in page image" className="max-h-36 w-full object-cover" />
+            <img src={placeholder_img} alt="Sign in page image" className="max-h-64 w-full object-cover object-top rounded-lg" />
         </main>
     );
 }
