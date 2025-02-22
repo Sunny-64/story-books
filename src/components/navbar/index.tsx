@@ -4,6 +4,7 @@ import { useTheme } from '@/hooks';
 import { Avatar, AvatarFallback, AvatarImage } from '@/lib/shadcn/ui/avatar';
 import Dropdown from '../core/dropdown';
 import { DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator } from '@/lib/shadcn/ui/dropdown-menu';
+import { Link } from 'react-router-dom';
 
 const MENU = [
   { label: 'Profile', to: '/profile' },
@@ -34,10 +35,12 @@ const index = () => {
               containerStyles="hidden sm:block px-0 md:basis-sm"
             />
           </li>
-          {!login ? (
-            <Button label="Sign In" />
-          ) : (
-            <li>
+          <li>
+            {!login ? (
+              <Link to="/auth">
+                <Button label="Login" />
+              </Link>
+            ) : (
               <Dropdown
                 dropdownTrigger={
                   <span className="flex items-center gap-2">
@@ -70,8 +73,8 @@ const index = () => {
                   </>
                 }
               />
-            </li>
-          )}
+            )}
+          </li>
         </ul>
       </div>
     </header>

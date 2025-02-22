@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Filters from './Filters';
 import ReadingHistory from './ReadingHistory';
 
