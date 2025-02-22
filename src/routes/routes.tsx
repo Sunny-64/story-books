@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import { Home } from '../pages';
+import { Home, SignIn } from '../pages';
 import { Root } from '../layouts';
 
 export const routes: RouteObject[] = [
@@ -14,6 +14,10 @@ export const routes: RouteObject[] = [
       {
         path: 'about',
         element: <div>About</div>,
+      },
+      {
+        path: 'sign-in',
+        element: <SignIn />,
       },
     ],
   },
