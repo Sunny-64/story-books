@@ -2,7 +2,7 @@ import placeholder_img from '../assets/images/Art.png';
 import google_icon from '../assets/icons/Google.svg';
 import facebook_icon from '../assets/icons/Facebook.svg';
 
-const Login: React.FC = () => {
+const SignIn: React.FC = () => {
     return (
         <main className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-5 p-5 w-full overflow-hidden justify-center items-center">
             <div className="order-2 md:order-1 flex flex-col gap-2 md:gap-4 w-full md:max-w-sm max-w-md mx-auto">
@@ -62,4 +62,4 @@ const Login: React.FC = () => {
     );
 }
 
-export default Login;
+export default SignIn;
