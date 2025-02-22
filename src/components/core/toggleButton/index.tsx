@@ -1,4 +1,4 @@
-import { Switch } from '@headlessui/react';
+import { Switch } from "@/components/ui/switch"
 
 interface ToggleButtonProps {
   label: string;
