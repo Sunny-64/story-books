@@ -1,16 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ToggleButton } from '../components';
-import { IThemeContext, ThemeContext } from '../context/ThemeProvider';
+import { useTheme } from '../hooks';
 
 const Home: React.FC = () => {
-  const { theme, toggleTheme } = useContext<IThemeContext | null>(ThemeContext)!;
+  const { theme, setTheme } = useTheme();
   return (
     <div>
       <ToggleButton
-        label={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+        label='Dark Mode'
         labelStyles="font-medium"
         enabled={theme === 'dark'}
-        onClick={() => toggleTheme()}
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         containerClassName="absolute top-5 right-5"
       />
       <div className="min-h-screen flex flex-col justify-center items-center">
