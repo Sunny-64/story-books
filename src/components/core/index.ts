@@ -1,4 +1,4 @@
 export * from './button';
-export * from './toggleSwitch';
+export * from './toggle-switch';
 export * from './text-input';
 export * from './dropdown';
