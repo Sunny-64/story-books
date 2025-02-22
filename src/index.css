@@ -23,29 +23,3 @@
   background-color: var(--color-dark-secondary);
   color: var(--color-primary);
 }
-
-.custom-bars {
-  position: relative;
-}
-
-.custom-bars::before {
-  position: absolute;
-  content: "";
-  width: 30%;
-  height: 1.1px;
-  background-color: rgba(128, 128, 128, 0.400);
-  left: 0;
-  bottom: 50%;
-  transform: translateX(12px);
-}
-
-.custom-bars::after {
-  position: absolute;
-  content: "";
-  width: 30%;
-  height: 1.1px;
-  background-color: rgba(128, 128, 128, 0.400);
-  right: 0;
-  bottom: 45%;
-  transform: translateX(-12px);
-}

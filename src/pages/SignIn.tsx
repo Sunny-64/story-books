@@ -33,7 +33,9 @@ const Login: React.FC = () => {
                     <button className="bg-accent px-3 py-2 text-white rounded-md cursor-pointer">Sign In</button>
                 </form>
 
-                <span className="custom-bars text-xs text-center w-full">Or sign in with</span>
+                <span className="text-xs text-center w-full relative before:content-[''] before:absolute before:top-1/2 before:left-5 before:w-28 before:h-[1.1px] before:bg-gray-300 after:content-[''] after:absolute after:top-1/2 after:right-5 after:w-28 after:h-[1.1px] after:bg-gray-300">
+                    Or sign in with
+                </span>
                 <div className="grid grid-cols-2 md:grid-cols-1 gap-4 w-full">
                     <button className="bg-tertiary p-2.5 rounded-lg flex items-center justify-center gap-2 cursor-pointer">
                         <img src={google_icon} alt="Login with Google" />
@@ -56,7 +58,7 @@ const Login: React.FC = () => {
                     className="w-md h-full max-h-48 md:max-h-screen object-cover object-top"
                 />
             </div>
-        </main>
+        </main >
     );
 }
 
