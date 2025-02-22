@@ -1,7 +1,6 @@
-import { Input, Field, Label } from '@headlessui/react';
 import { twMerge } from 'tailwind-merge';
-
 export interface TextInputProps {
+  id: string;
   name: string;
   label?: string;
   placeholder?: string;
@@ -25,22 +24,23 @@ export const TextInput: React.FC<TextInputProps> = ({
   suffixIconStyles,
 }) => {
   return (
-    <Field className={containerStyles}>
+    <div className={containerStyles}>
       {label && (
-        <Label htmlFor={name} className={twMerge('cursor-pointer', labelStyles)}>
+        <label htmlFor={name} className={twMerge('cursor-pointer', labelStyles)}>
           {label}
-        </Label>
+        </label>
       )}
-      <div className={twMerge('flex items-center border-2 border-gray-400 rounded-md px-4 py-1', customStyles)}>
-        <Input
+      <div className={twMerge('flex gap-2 items-center border-2 border-gray-400 rounded-md px-4 py-1', customStyles)}>
+        <input
           id={name}
           name={name}
           placeholder={placeholder}
           type={type}
-          className={twMerge('outline-gray-500 flex-grow placeholder:text-gray-500 outline-none')}
+          className={`w-full outline-none border-none px-0 shadow-none`}
+          autoComplete="off"
         />
-        {suffixIcon && <span className={twMerge('py-2 px-2', suffixIconStyles)}>{suffixIcon}</span>}
+        {suffixIcon && <span className={twMerge(' cursor-pointer grow-1', suffixIconStyles)}>{suffixIcon}</span>}
       </div>
-    </Field>
+    </div>
   );
 };

@@ -1,13 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import { Navbar } from '../components';
 
-const Root = () => {
+const AuthLayout = () => {
   return (
     <div className="min-h-screen px-4 md:px-10 py-4">
-      <Navbar />
       <Outlet />
     </div>
   );
 };
 
-export default Root;
+export default AuthLayout;
