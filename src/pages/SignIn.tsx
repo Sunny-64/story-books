@@ -1,6 +1,7 @@
 import placeholder_img from '../assets/images/Art.png';
 import google_icon from '../assets/icons/Google.svg';
 import facebook_icon from '../assets/icons/Facebook.svg';
+import { Button } from '../components';
 
 const SignIn: React.FC = () => {
     return (
@@ -30,7 +31,10 @@ const SignIn: React.FC = () => {
                         />
                     </div>
                     <span className="text-end text-xs -mt-2 cursor-pointer">Forgot Password?</span>
-                    <button className="bg-accent px-3 py-2 text-white rounded-md cursor-pointer">Sign In</button>
+                    <Button
+                        label='Sign In'
+                        customClasses='w-full'
+                    />
                 </form>
 
                 <span className="text-xs text-center w-full relative before:content-[''] before:absolute before:top-1/2 before:left-5 before:w-28 before:h-[1.1px] before:bg-gray-300 after:content-[''] after:absolute after:top-1/2 after:right-5 after:w-28 after:h-[1.1px] after:bg-gray-300">
