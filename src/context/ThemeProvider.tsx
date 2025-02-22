@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useState } from 'react';
 import { getLocalItem, setLocalItem } from '../utils';
 
 export interface IThemeContext {
@@ -16,10 +16,6 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     setTheme(newTheme);
     setLocalItem('theme', JSON.stringify(newTheme));
   };
-
-  useEffect(() => {
-    document.getElementById("root")!.className = `${theme}-mode`;
-  }, [theme]);
 
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 };

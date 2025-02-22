@@ -13,17 +13,6 @@
   --color-dark-secondary: #1a1a1a;
 }
 
-
-.light-mode {
-  background-color: var(--color-secondary);
-  color: var(--dark-primary);
-}
-
-.dark-mode {
-  background-color: var(--color-dark-secondary);
-  color: var(--color-primary);
-}
-
 .custom-bars {
   position: relative;
 }
