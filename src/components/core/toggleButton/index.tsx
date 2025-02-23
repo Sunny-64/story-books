@@ -19,7 +19,7 @@ export const ToggleButton: React.FC<ToggleButtonProps> = ({
 }) => {
   return (
     <div className={`flex gap-4 ${containerClassName}`}>
-      <label className={`${labelStyles}`}>{label} Mode</label>
+      <label className={`${labelStyles}`}>{label}</label>
       <Switch
         className={`group inline-flex h-6 w-11 items-center rounded-full bg-gray-200 transition data-[checked]:bg-accent ${className}`}
         onClick={onClick}
