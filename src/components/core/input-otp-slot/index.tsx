@@ -24,7 +24,7 @@ export const InputOTPContainer: React.FC<IOtpSlot> = ({ maxLength, pattern, cust
                                     <InputOTPSlot
                                         key={slotNumber}
                                         index={slotNumber}
-                                        className={`${customOtpSlotClasses} data-[active=true]:border-accent data-[active=true]:ring-accent/50`}
+                                        className={`${customOtpSlotClasses} border-gray-300 data-[active=true]:border-accent data-[active=true]:ring-accent/50`}
                                     />
                                 )
                             );
