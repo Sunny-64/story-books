@@ -1,10 +1,10 @@
-import { IoSearch } from 'react-icons/io5';
-import { Button, TextInput, ToggleSwitch } from '../core';
 import { useTheme } from '@/hooks';
 import { Avatar, AvatarFallback, AvatarImage } from '@/lib/shadcn/ui/avatar';
-import Dropdown from '../core/dropdown';
 import { DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator } from '@/lib/shadcn/ui/dropdown-menu';
+import { IoSearch } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
+import { Button, TextInput, ToggleSwitch } from '../core';
+import Dropdown from '../core/dropdown';
 
 const MENU = [
   { label: 'Profile', to: '/profile' },

@@ -1,24 +1,24 @@
+const FiltersData = [
+  {
+    title: 'Categories',
+    items: ['Novel', 'Poem', 'Drama'],
+  },
+  {
+    title: 'Genre',
+    items: ['Fiction', 'Literature', 'Mystery', 'Thriller'],
+  },
+];
 const Filters = () => {
-  return (
-    <div>
-      <div className="mb-3">
-        <p className="font-semibold text-gray-500 text-lg">Categories</p>
-        <ul className="space-y-1">
-          <li>Category 1</li>
-          <li>Category 2</li>
-          <li>Category 3</li>
-        </ul>
-      </div>
-      <div>
-        <p className="font-semibold text-gray-500 text-lg">Genres</p>
-        <ul className="space-y-1">
-          <li>Genre 1</li>
-          <li>Genre 2</li>
-          <li>Genre 3</li>
-        </ul>
-      </div>
+  return FiltersData.map((filter, index) => (
+    <div className="mb-6" key={index}>
+      <p className="font-semibold text-gray-500 text-xl">{filter.title}</p>
+      <ul className="mt-2 space-y-2">
+        {filter.items.map((item, index) => (
+          <li className="text-gray-700" key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
-  );
+  ));
 };
 
 export default Filters;
