@@ -37,7 +37,7 @@ const SignIn: React.FC = () => {
                     />
                 </form>
 
-                <span className="text-xs text-center w-full relative before:content-[''] before:absolute before:top-1/2 before:left-5 before:w-28 before:h-[1.1px] before:bg-gray-300 after:content-[''] after:absolute after:top-1/2 after:right-5 after:w-28 after:h-[1.1px] after:bg-gray-300">
+                <span className="text-xs text-center w-full relative before:content-[''] before:absolute before:top-1/2 before:left-3 before:w-24 md:before:left-5 md:before:w-28 before:h-[1.1px] before:bg-gray-300 after:content-[''] after:absolute after:top-1/2 after:right-3 after:w-24 md:after:right-5 md:after:w-28 after:h-[1.1px] after:bg-gray-300">
                     Or sign in with
                 </span>
                 <div className="grid grid-cols-2 md:grid-cols-1 gap-4 w-full">

@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <ToggleButton
-        label='Dark Mode'
+        label={theme === 'light' ? 'Light' : 'Dark'}
         labelStyles="font-medium"
         enabled={theme === 'dark'}
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
