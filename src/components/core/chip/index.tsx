@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ChipProps {
-  chipText: string;
+  chipText: React.ReactNode | string;
   shape?: 'capsule' | 'flat';
   customStyles?: string;
 }
