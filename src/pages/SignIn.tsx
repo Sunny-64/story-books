@@ -2,10 +2,18 @@ import placeholder_img from '../assets/images/Art.png';
 import google_icon from '../assets/icons/Google.svg';
 import facebook_icon from '../assets/icons/Facebook.svg';
 import { Button } from '../components';
+import { FormEvent, useState } from 'react';
 
 const SignIn: React.FC = () => {
+    const [isForgotPassword, setIsForgotPassword] = useState(false);
+
+    const handleForgotPassword = (e: FormEvent) => {
+        e.preventDefault();
+        setIsForgotPassword((prev) => !prev)
+    }
+
     return (
-        <main className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-5 p-5 w-full overflow-hidden justify-center items-center">
+        <main className="min-h-[90vh] grid grid-cols-1 md:grid-cols-2 gap-5 p-5 w-full overflow-hidden justify-center items-center">
             <div className="order-2 md:order-1 flex flex-col gap-2 md:gap-4 w-full md:max-w-sm max-w-md mx-auto">
                 <div className="space-y-2 text-left hidden md:block">
                     <h1 className="text-2xl md:text-3xl font-bold">Welcome Back 👋</h1>
@@ -14,25 +22,45 @@ const SignIn: React.FC = () => {
                     </p>
                 </div>
                 <form className="flex flex-col gap-4 md:gap-5 w-full">
-                    <div className="flex flex-col gap-1">
-                        <label htmlFor="email" className="text-sm font-medium">Email</label>
-                        <input
-                            type="text"
-                            placeholder="example@mail.com"
-                            className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
-                        />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                        <label htmlFor="password" className="text-sm font-medium">Password</label>
-                        <input
-                            type="password"
-                            placeholder="At least 8 characters"
-                            className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
-                        />
-                    </div>
-                    <span className="text-end text-xs -mt-2 cursor-pointer">Forgot Password?</span>
+                    {isForgotPassword ? (
+                        <>
+                            <div className="flex flex-col gap-1">
+                                <label htmlFor="email" className="text-sm font-medium">Enter email or username</label>
+                                <input
+                                    type="text"
+                                    placeholder="example@mail.com"
+                                    className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
+                                />
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                            <div className="flex flex-col gap-1">
+                                <label htmlFor="email" className="text-sm font-medium">Email</label>
+                                <input
+                                    type="text"
+                                    placeholder="example@mail.com"
+                                    className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
+                                />
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <label htmlFor="password" className="text-sm font-medium">Password</label>
+                                <input
+                                    type="password"
+                                    placeholder="At least 8 characters"
+                                    className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
+                                />
+                            </div>
+                        </>
+                    )}
+                    <button
+                        className={`text-end text-xs -mt-2 cursor-pointer ${isForgotPassword ? "hidden" : ""}`}
+                        onClick={handleForgotPassword}
+                    >
+                        Forgot Password?
+                    </button>
                     <Button
-                        label='Sign In'
+                        label={isForgotPassword ? 'Send Code' : 'Sign In'}
                         customClasses='w-full'
                     />
                 </form>
