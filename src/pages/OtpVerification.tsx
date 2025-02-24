@@ -1,4 +1,4 @@
-import { Button, InputOTPContainer } from "@/components";
+import { Button, OtpInput } from "@/components";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
 
 const OtpVerification: React.FC = () => {
@@ -9,7 +9,7 @@ const OtpVerification: React.FC = () => {
                     <h1 className="text-3xl font-bold">OTP Verification</h1>
                     <p className="text-sm text-gray-500">Enter the 6-digit verification code that was sent to your email address.</p>
                 </div>
-                <InputOTPContainer maxLength={6} pattern={REGEXP_ONLY_DIGITS} numberOfInputGroups={2} />
+                <OtpInput maxLength={6} pattern={REGEXP_ONLY_DIGITS} numberOfInputGroups={2} />
                 <Button label="Verify Account" variant={'default'} />
                 <p className="text-sm text-gray-500">Didn&apos;t receive the code? <span className="text-accent font-medium cursor-pointer">Resend</span></p>
             </div>

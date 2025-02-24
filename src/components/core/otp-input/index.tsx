@@ -8,7 +8,7 @@ export interface IOtpSlot {
     customOtpSlotClasses?: string;
 }
 
-export const InputOTPContainer: React.FC<IOtpSlot> = ({ maxLength, pattern, customOtpSlotClasses, numberOfInputGroups }) => {
+export const OtpInput: React.FC<IOtpSlot> = ({ maxLength, pattern, customOtpSlotClasses, numberOfInputGroups }) => {
     const slotsPerGroup = Math.ceil(maxLength / numberOfInputGroups);
 
     return (
