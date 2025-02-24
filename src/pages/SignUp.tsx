@@ -5,7 +5,7 @@ import { Button } from '../components';
 
 const SignUp: React.FC = () => {
     return (
-        <main className="min-h-screen grid grid-cols-1 md:grid-cols-2 gap-5 p-5 w-full overflow-hidden justify-center items-center">
+        <main className="min-h-[90vh] grid grid-cols-1 md:grid-cols-2 gap-5 p-5 w-full overflow-hidden justify-center items-center">
             <div className="order-2 md:order-1 flex flex-col gap-2 md:gap-4 w-full md:max-w-sm max-w-md mx-auto">
                 <div className="space-y-2 text-left hidden md:block">
                     <h1 className="text-2xl md:text-3xl font-bold">Get Started 📚</h1>
