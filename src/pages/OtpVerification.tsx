@@ -1,5 +1,4 @@
-import { Button } from "@/components";
-import { InputOTPContainer } from "@/components/core/input-otp-slot";
+import { Button, InputOTPContainer } from "@/components";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
 
 const OtpVerification: React.FC = () => {
