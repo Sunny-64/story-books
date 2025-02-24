@@ -1,7 +1,7 @@
 import placeholder_img from '../assets/images/Art.png';
 import google_icon from '../assets/icons/Google.svg';
 import facebook_icon from '../assets/icons/Facebook.svg';
-import { Button } from '../components';
+import { Button, TextInput } from '../components';
 
 const SignUp: React.FC = () => {
     return (
@@ -14,30 +14,24 @@ const SignUp: React.FC = () => {
                     </p>
                 </div>
                 <form className="flex flex-col gap-4 md:gap-5 w-full">
-                    <div className="flex flex-col gap-1">
-                        <label htmlFor="email" className="text-sm font-medium">Email</label>
-                        <input
-                            type="text"
-                            placeholder="example@mail.com"
-                            className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
-                        />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                        <label htmlFor="password" className="text-sm font-medium">Password</label>
-                        <input
-                            type="password"
-                            placeholder="At least 8 characters"
-                            className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
-                        />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                        <label htmlFor="confirmPassword" className="text-sm font-medium">Confirm Password</label>
-                        <input
-                            type="password"
-                            placeholder="Confirm your password"
-                            className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
-                        />
-                    </div>
+                    <TextInput
+                        name='email'
+                        type='email'
+                        label='Email'
+                        placeholder='example@mail.com'
+                    />
+                    <TextInput
+                        name='password'
+                        type='password'
+                        label='Password'
+                        placeholder='at least 8 characters'
+                    />
+                    <TextInput
+                        name='confirmPassword'
+                        type='confirmPassword'
+                        label='Confirm Password'
+                        placeholder='confirm your password'
+                    />
                     <Button
                         label='Sign Up'
                         customClasses='w-full'

@@ -1,7 +1,7 @@
 import placeholder_img from '../assets/images/Art.png';
 import google_icon from '../assets/icons/Google.svg';
 import facebook_icon from '../assets/icons/Facebook.svg';
-import { Button } from '../components';
+import { Button, TextInput } from '../components';
 import { FormEvent, useState } from 'react';
 
 const SignIn: React.FC = () => {
@@ -23,34 +23,24 @@ const SignIn: React.FC = () => {
                 </div>
                 <form className="flex flex-col gap-4 md:gap-5 w-full">
                     {isForgotPassword ? (
-                        <>
-                            <div className="flex flex-col gap-1">
-                                <label htmlFor="email" className="text-sm font-medium">Enter email or username</label>
-                                <input
-                                    type="text"
-                                    placeholder="example@mail.com"
-                                    className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
-                                />
-                            </div>
-                        </>
+                        <TextInput
+                            name='email'
+                            label='Email or Username'
+                        />
                     ) : (
                         <>
-                            <div className="flex flex-col gap-1">
-                                <label htmlFor="email" className="text-sm font-medium">Email</label>
-                                <input
-                                    type="text"
-                                    placeholder="example@mail.com"
-                                    className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
-                                />
-                            </div>
-                            <div className="flex flex-col gap-1">
-                                <label htmlFor="password" className="text-sm font-medium">Password</label>
-                                <input
-                                    type="password"
-                                    placeholder="At least 8 characters"
-                                    className="border border-gray-300 px-3 py-1.5 rounded-md outline-none focus:border-accent"
-                                />
-                            </div>
+                            <TextInput
+                                name='email'
+                                type='email'
+                                label='Email'
+                                placeholder='example@mail.com'
+                            />
+                            <TextInput
+                                name='password'
+                                type='password'
+                                label='Password'
+                                placeholder='at least 8 characters'
+                            />
                         </>
                     )}
                     <button

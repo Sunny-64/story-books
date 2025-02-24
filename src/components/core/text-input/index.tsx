@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 export interface TextInputProps {
-  id: string;
+  id?: string;
   name: string;
   label?: string;
   placeholder?: string;
