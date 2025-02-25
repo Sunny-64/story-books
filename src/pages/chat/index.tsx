@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { chatList, chatMessages } from "./data";
 import { TextInput } from "@/components";
-import { X } from "lucide-react";
+import { Search, X } from "lucide-react";
 
 const Chat: React.FC = () => {
     const [selectedChat, setSelectedChat] = useState<keyof typeof chatMessages | null>(null);
@@ -12,7 +12,14 @@ const Chat: React.FC = () => {
         <main className="grid grid-cols-3 mt-5 max-h-[75vh] border">
 
             <aside className="p-5 col-span-1 border-r">
-                <h1 className="text-xl font-bold px-4">All Chats</h1>
+                <div className="relative mb-5">
+                    <TextInput
+                        name="search contacts"
+                        placeholder="Search Conversation"
+                        customStyles="rounded-full"
+                    />
+                    <Search className="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer" />
+                </div>
                 {chatList.map((chat) => (
                     <div
                         key={chat.id}
