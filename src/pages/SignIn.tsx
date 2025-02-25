@@ -3,9 +3,12 @@ import google_icon from '../assets/icons/Google.svg';
 import facebook_icon from '../assets/icons/Facebook.svg';
 import { Button, TextInput } from '../components';
 import { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn: React.FC = () => {
     const [isForgotPassword, setIsForgotPassword] = useState(false);
+
+    const navigate = useNavigate();
 
     const handleForgotPassword = (e: FormEvent) => {
         e.preventDefault();
@@ -52,6 +55,7 @@ const SignIn: React.FC = () => {
                     <Button
                         label={isForgotPassword ? 'Send Code' : 'Sign In'}
                         customClasses='w-full'
+                        onClick={() => isForgotPassword ? navigate('/auth/otp-verification') : ''}
                     />
                 </form>
 
