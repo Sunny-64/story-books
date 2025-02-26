@@ -62,7 +62,7 @@ const Chat: React.FC = () => {
                             <TextInput
                                 name="send message"
                                 placeholder="Type your message..."
-                                customStyles="py-2 px-4 rounded-full w-full"
+                                customStyles="py-2 px-4 rounded-full w-full bg-white"
                                 containerStyles="col-span-10"
                             />
                             <button
@@ -74,7 +74,7 @@ const Chat: React.FC = () => {
                         </form>
                     </div>
                 ) : (
-                    <p className="p-5 text-gray-500">No Chats Selected</p>
+                    <p className="h-full bg-gray-100 p-5 text-gray-500">No Chats Selected</p>
                 )}
             </div>
         </main>
