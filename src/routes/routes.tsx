@@ -1,5 +1,5 @@
 import { Navigate, RouteObject } from 'react-router-dom';
-import { Home, OtpVerification, SignIn, SignUp } from '../pages';
+import { Chat, Home, OtpVerification, SignIn, SignUp } from '../pages';
 import { Root } from '../layouts';
 import AuthLayout from '@/layouts/AuthLayout';
 
@@ -40,6 +40,10 @@ export const routes: RouteObject[] = [
       {
         path: 'about',
         element: <div>About</div>,
+      },
+      {
+        path: 'chat',
+        element: <Chat />,
       },
     ],
   },
